@@ -1,2 +1,2 @@
 # MSP430BoardSamples
-The code samples for my MSP430 development board 
+The code samples for my MSP430 development board using IAR.
