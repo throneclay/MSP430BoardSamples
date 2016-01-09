@@ -19,9 +19,9 @@ void led_init()
 
 void led1_on(int led)
 {
-  P4OUT |=LED_CODE1[led];
+  P4OUT |=LED_CODE1[led%8];
 }
 void led1_off(int led)
 {
-  P4OUT &=~LED_CODE1[led];
+  P4OUT &=~LED_CODE1[led%8];
 }
