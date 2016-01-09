@@ -2,19 +2,32 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>3673430904</fileChecksum>
+  <fileChecksum>354490580</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
       <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\serial\serial.h</file>
       <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\serial\serial.c</file>
       <file>$PROJ_DIR$\Debug\Exe\Serial.d43</file>
-      <file>$TOOLKIT_DIR$\inc\io430x14x.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
       <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\io430x14x.h</file>
       <file>$TOOLKIT_DIR$\inc\io430.h</file>
       <file>$PROJ_DIR$\Debug\Obj\Serial.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\serial.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\serial.pbi</file>
     </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 4</file>
+        </tool>
+      </outputs>
+    </file>
     <file>
       <name>$PROJ_DIR$\main.c</name>
       <outputs>
@@ -24,13 +37,32 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 1</file>
+          <file> 5</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 6 4 5</file>
+          <file> 8 7 6</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\serial\serial.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
         </tool>
       </inputs>
     </file>
@@ -39,18 +71,9 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 1</file>
+          <file> 5 11</file>
         </tool>
       </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 3</file>
-        </tool>
-      </outputs>
     </file>
     <forcedrebuild>
       <name>[MULTI_TOOL]</name>

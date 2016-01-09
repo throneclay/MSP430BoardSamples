@@ -1573,7 +1573,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>templproj.txt</state>
+          <state>BlinkLED.txt</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -1869,12 +1869,21 @@
     </settings>
   </configuration>
   <group>
-    <name>sys</name>
+    <name>led</name>
     <file>
-      <name>$PROJ_DIR$\sys\sys.c</name>
+      <name>$PROJ_DIR$\..\common\led\led.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\sys\sys.h</name>
+      <name>$PROJ_DIR$\..\common\led\led.h</name>
+    </file>
+  </group>
+  <group>
+    <name>sys</name>
+    <file>
+      <name>$PROJ_DIR$\..\common\sys\sys.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\common\sys\sys.h</name>
     </file>
   </group>
   <file>

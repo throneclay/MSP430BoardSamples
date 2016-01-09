@@ -1871,19 +1871,19 @@
   <group>
     <name>SMG</name>
     <file>
-      <name>$PROJ_DIR$\SMG\SMG.c</name>
+      <name>$PROJ_DIR$\..\common\SMG\SMG.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\SMG\SMG.h</name>
+      <name>$PROJ_DIR$\..\common\SMG\SMG.h</name>
     </file>
   </group>
   <group>
     <name>sys</name>
     <file>
-      <name>$PROJ_DIR$\sys\sys.c</name>
+      <name>$PROJ_DIR$\..\common\sys\sys.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\sys\sys.h</name>
+      <name>$PROJ_DIR$\..\common\sys\sys.h</name>
     </file>
   </group>
   <file>

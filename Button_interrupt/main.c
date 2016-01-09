@@ -1,10 +1,11 @@
 
-#include "msp430.h"
+#include "../common/sys/sys.h"
+#include "../common/button/button.h"
+#include "../common/led/led.h"
 
-int main( void )
+void main( void )
 {
   // Stop watchdog timer to prevent time out reset
   WDTCTL = WDTPW + WDTHOLD;
-
-  return 0;
+  
 }

@@ -640,7 +640,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>templproj.d43</state>
+          <state>Serial.d43</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -1868,6 +1868,15 @@
       <data/>
     </settings>
   </configuration>
+  <group>
+    <name>serial</name>
+    <file>
+      <name>$PROJ_DIR$\serial\serial.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\serial\serial.h</name>
+    </file>
+  </group>
   <file>
     <name>$PROJ_DIR$\main.c</name>
   </file>

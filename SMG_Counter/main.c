@@ -1,7 +1,7 @@
 
 #include <msp430x14x.h> 
-#include "sys/sys.h"
-#include "SMG/SMG.h"
+#include "../common/sys/sys.h"
+#include "../common/SMG/SMG.h"
 
 void main( void )
 {
@@ -15,7 +15,7 @@ void main( void )
   while(1)
   {
     SMG_Display(time);
-    if(t++>100)
+    if(t++>10)
     {
       t=0;
       if(time++>=9999)
