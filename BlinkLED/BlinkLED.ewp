@@ -640,7 +640,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>templproj.d43</state>
+          <state>BlinkLED.d43</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -1868,6 +1868,15 @@
       <data/>
     </settings>
   </configuration>
+  <group>
+    <name>sys</name>
+    <file>
+      <name>$PROJ_DIR$\sys\sys.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\sys\sys.h</name>
+    </file>
+  </group>
   <file>
     <name>$PROJ_DIR$\main.c</name>
   </file>
