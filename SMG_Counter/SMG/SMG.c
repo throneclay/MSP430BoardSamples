@@ -1,4 +1,20 @@
+/*
 
+            --a--
+		  |	       |
+		  f        b
+		  |        |
+            --g--
+		  |        |
+		  e        c
+		  |        |
+		    --d--    dp
+
+P4 -> 7  6 5 4 3 2 1 0
+      |  | | | | | | |
+	  dp g f e d c b a
+
+*/
 #include "../sys/sys.h"
 #include "SMG.h"
 
