@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>2026799978</fileChecksum>
+  <fileChecksum>4066247896</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -42,6 +42,10 @@
       <inputs>
         <tool>
           <name>ICC430</name>
+          <file> 18 19 5 17 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
           <file> 18 19 5 17 14</file>
         </tool>
       </inputs>
@@ -119,6 +123,10 @@
         </tool>
       </inputs>
     </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
   </configuration>
   <configuration>
     <name>Release</name>
@@ -208,11 +216,11 @@
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 16 15</file>
+          <file> 16 17 18 1 15</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 16 15</file>
+          <file> 16 17 18 1 15</file>
         </tool>
       </inputs>
     </file>
@@ -231,11 +239,11 @@
       <inputs>
         <tool>
           <name>ICC430</name>
-          <file> 17 18 1 16</file>
+          <file> 16 17 18 1</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 17 18 1 16</file>
+          <file> 16 17 18 1</file>
         </tool>
       </inputs>
     </file>

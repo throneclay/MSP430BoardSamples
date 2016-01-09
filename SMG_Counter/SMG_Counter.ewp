@@ -121,7 +121,7 @@
         </option>
         <option>
           <name>GHeap20Size</name>
-          <state>###Uninitialized###</state>
+          <state>80</state>
         </option>
         <option>
           <name>GeneralMisraRules98</name>
@@ -834,7 +834,7 @@
         </option>
         <option>
           <name>ExtraOutputFile</name>
-          <state>templproj.a43</state>
+          <state>SMG_Counter.a43</state>
         </option>
         <option>
           <name>ExtraOutputFormat</name>
@@ -1054,7 +1054,7 @@
         </option>
         <option>
           <name>GHeap20Size</name>
-          <state>###Uninitialized###</state>
+          <state>80</state>
         </option>
         <option>
           <name>GeneralMisraRules98</name>
@@ -1573,7 +1573,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>templproj.txt</state>
+          <state>SMG_Counter.txt</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -1767,7 +1767,7 @@
         </option>
         <option>
           <name>ExtraOutputFile</name>
-          <state>templproj.a43</state>
+          <state>SMG_Counter.a43</state>
         </option>
         <option>
           <name>ExtraOutputFormat</name>

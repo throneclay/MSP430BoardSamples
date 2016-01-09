@@ -1,6 +1,7 @@
 #ifndef __SYS_H__
 #define __SYS_H__
 
+#include <msp430x14x.h>
 
 #define uint unsigned int
 #define uchar unsigned char
