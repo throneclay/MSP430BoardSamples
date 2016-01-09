@@ -2,101 +2,47 @@
 
 <Workspace>
   <ConfigDictionary>
-    <CurrentConfigs>
-      <Project>SMG_Counter/Debug</Project>
-    </CurrentConfigs>
-  </ConfigDictionary>
+    
+  <CurrentConfigs><Project>SMG_Counter/Debug</Project></CurrentConfigs></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>124</Column0>
-          <Column1>27</Column1>
-          <Column2>27</Column2>
-          <Column3>27</Column3>
-        </ColumnWidths>
+          
+          
+          
+          
+        <Column0>192</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       </Workspace>
-    </Static>
+    <Build><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1216</ColumnWidth1><ColumnWidth2>324</ColumnWidth2><ColumnWidth3>81</ColumnWidth3></Build></Static>
     <Windows>
-      <Wnd1>
+      
+    <Wnd0>
         <Tabs>
           <Tab>
             <Identity>TabID-10775-7100</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
-              <NodeDict>
-                <ExpandedNode>SMG_Counter</ExpandedNode>
-              </NodeDict>
-            </Session>
+              
+            <NodeDict><ExpandedNode>SMG_Counter</ExpandedNode><ExpandedNode>SMG_Counter/SMG</ExpandedNode><ExpandedNode>SMG_Counter/sys</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd1>
-    </Windows>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1><Tabs><Tab><Identity>TabID-28551-22251</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd1></Windows>
     <Editor>
-      <Pane>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>C:\Program Files\IAR Systems\Embedded Workbench 6.0 Evaluation\430\doc\infocenter\index.ENU.html</Filename>
-        </Tab>
-        <ActiveTab>0</ActiveTab>
-      </Pane>
-      <ActivePane>0</ActivePane>
-      <Sizes>
-        <Pane>
-          <X>1000000</X>
-          <Y>1000000</Y>
-        </Pane>
-      </Sizes>
-      <SplitMode>1</SplitMode>
-    </Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\SMG\SMG.h</Filename><XPos>0</XPos><YPos>1</YPos><SelStart>37</SelStart><SelEnd>37</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\sys\sys.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>36</SelStart><SelEnd>36</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\SMG\SMG.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>35</SelStart><SelEnd>35</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>182</SelStart><SelEnd>182</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\sys\sys.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>266</SelStart><SelEnd>266</SelEnd></Tab><ActiveTab>4</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
-      <Top>
-        <Row0>
-          <Sizes>
-            <Toolbar-00f11bf8>
-              <key>iaridepm.enu1</key>
-            </Toolbar-00f11bf8>
-          </Sizes>
-        </Row0>
-      </Top>
-      <Left>
-        <Row0>
-          <Sizes>
-            <Wnd1>
-              <Rect>
-                <Top>-2</Top>
-                <Left>-2</Left>
-                <Bottom>646</Bottom>
-                <Right>198</Right>
-                <x>-2</x>
-                <y>-2</y>
-                <xscreen>200</xscreen>
-                <yscreen>200</yscreen>
-                <sizeHorzCX>159744</sizeHorzCX>
-                <sizeHorzCY>289436</sizeHorzCY>
-                <sizeVertCX>159744</sizeVertCX>
-                <sizeVertCY>937771</sizeVertCY>
-              </Rect>
-            </Wnd1>
-          </Sizes>
-        </Row0>
-      </Left>
-      <Right>
-        <Row0>
-          <Sizes/>
-        </Row0>
-      </Right>
-      <Bottom>
-        <Row0>
-          <Sizes/>
-        </Row0>
-      </Bottom>
-      <Float>
-        <Sizes/>
-      </Float>
-    </Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01c0f838><key>iaridepm.enu1</key></Toolbar-01c0f838></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>725</Bottom><Right>266</Right><x>-2</x><y>-2</y><xscreen>268</xscreen><yscreen>280</yscreen><sizeHorzCX>159524</sizeHorzCX><sizeHorzCY>289256</sizeHorzCY><sizeVertCX>159524</sizeVertCX><sizeVertCY>751033</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>198</Bottom><Right>1682</Right><x>-2</x><y>-2</y><xscreen>1684</xscreen><yscreen>200</yscreen><sizeHorzCX>1002381</sizeHorzCX><sizeHorzCY>206612</sizeHorzCY><sizeVertCX>119048</sizeVertCX><sizeVertCY>206612</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

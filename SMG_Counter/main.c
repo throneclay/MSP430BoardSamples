@@ -1,5 +1,7 @@
 
-#include "io430.h"
+#include <msp430x14x.h> 
+#include "sys/sys.h"
+#include "SMG/SMG.h"
 
 int main( void )
 {
