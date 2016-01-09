@@ -7,7 +7,10 @@
 #define KEY3 3
 #define KEY4 4
 
+extern uchar KEY_Value_int;
+
 void button_init();
+void button_init_int();
 uchar button_scan();
 
 #endif

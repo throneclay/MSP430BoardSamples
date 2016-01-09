@@ -1,12 +1,14 @@
 #include "../sys/sys.h"
 #include "button.h"
 
+uchar KEY_Value_int = 0;
+
 void button_init()
 {
   P1DIR &= 0xF0;
 }
 
-void button_init_int()
+void button_init_int()//中断方式
 {
   P1DIR &= 0xF0;
   P1IES = 0X0F;               //P1.0~P1.3选择下降沿中断
@@ -40,4 +42,75 @@ uchar button_scan()
     }
   }
   return 0;
+}
+
+/*
+  中断函数
+*/
+#pragma vector=PORT1_VECTOR
+__interrupt void PORT1_ISR(void)
+{
+  switch(P1IFG & 0X0F)
+  {
+    case 0x01:
+      if(KEY_IN == 0x0e)
+      {
+        Delay_ms(10);                  //延时消抖
+        if(KEY_IN == 0x0e)
+        {
+          LPM1_EXIT;
+          while(KEY_IN != 0x0f);
+          KEY_Value_int = 0;
+          P1IFG = 0;
+        }
+      }
+      break;
+      
+  case 0x02:
+    if(KEY_IN == 0x0d)
+    {
+      Delay_ms(10);                    //延时消抖
+      if(KEY_IN == 0x0d)
+      {
+        LPM1_EXIT;
+        while(KEY_IN != 0x0f);
+        KEY_Value_int = 1;
+        P1IFG = 0;
+      }
+    }
+    break;
+    
+  case 0x04:
+    if (KEY_IN == 0x0b)
+    {
+      Delay_ms(10);                    //延时消抖
+      if(KEY_IN == 0x0b)
+      {
+        LPM1_EXIT;
+        while(KEY_IN != 0x0f);
+        KEY_Value_int = 2;
+        P1IFG = 0;
+        }
+      }
+    break;
+    
+  case 0x08:
+    if (KEY_IN == 0x07)
+    {
+      Delay_ms(10);                    //延时消抖
+      if(KEY_IN == 0x07)
+      {
+        LPM1_EXIT;
+        while(KEY_IN != 0x0f);
+        KEY_Value_int = 3;
+        P1IFG = 0;
+      }
+    }
+    break;
+    
+  default:
+    while(KEY_IN != 0x0f);       //等待按键放开
+    P1IFG = 0;
+    break;
+  }
 }
