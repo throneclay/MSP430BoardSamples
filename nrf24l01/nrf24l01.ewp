@@ -640,7 +640,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>DS18B20.d43</state>
+          <state>templproj.d43</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -1868,33 +1868,6 @@
       <data/>
     </settings>
   </configuration>
-  <group>
-    <name>ds18b20</name>
-    <file>
-      <name>$PROJ_DIR$\..\common\ds18b20\ds18b20.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\common\ds18b20\ds18b20.h</name>
-    </file>
-  </group>
-  <group>
-    <name>SMG</name>
-    <file>
-      <name>$PROJ_DIR$\..\common\SMG\SMG.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\common\SMG\SMG.h</name>
-    </file>
-  </group>
-  <group>
-    <name>sys</name>
-    <file>
-      <name>$PROJ_DIR$\..\common\sys\sys.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\common\sys\sys.h</name>
-    </file>
-  </group>
   <file>
     <name>$PROJ_DIR$\main.c</name>
   </file>

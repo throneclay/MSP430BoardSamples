@@ -1,6 +1,6 @@
 
 //only using uart0
-//只有 uart0
+//只用 uart0
 
 //                For x = 1
 //                MSP430F149
@@ -26,11 +26,12 @@
 #ifndef __SERIAL_H__
 #define __SERIAL_H__
 
-#define RXBUFFLEN 65
+#define RXBUFFLEN 33
 
 extern uchar rx_buff[];
 
-void serial_init(uchar x);
+void serial_init(uchar en_rx,uchar x);
+
 void Send_char(uchar t);
 void Send_string(uchar *ptr);
 uchar Read_string();

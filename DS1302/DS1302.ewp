@@ -121,7 +121,7 @@
         </option>
         <option>
           <name>GHeap20Size</name>
-          <state>###Uninitialized###</state>
+          <state>80</state>
         </option>
         <option>
           <name>GeneralMisraRules98</name>
@@ -640,7 +640,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>templproj.d43</state>
+          <state>DS1302.d43</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -834,7 +834,7 @@
         </option>
         <option>
           <name>ExtraOutputFile</name>
-          <state>templproj.a43</state>
+          <state>DS1302.a43</state>
         </option>
         <option>
           <name>ExtraOutputFormat</name>
@@ -1054,7 +1054,7 @@
         </option>
         <option>
           <name>GHeap20Size</name>
-          <state>###Uninitialized###</state>
+          <state>80</state>
         </option>
         <option>
           <name>GeneralMisraRules98</name>
@@ -1573,7 +1573,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>templproj.txt</state>
+          <state>DS1302.txt</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -1767,7 +1767,7 @@
         </option>
         <option>
           <name>ExtraOutputFile</name>
-          <state>templproj.a43</state>
+          <state>DS1302.a43</state>
         </option>
         <option>
           <name>ExtraOutputFormat</name>
@@ -1868,6 +1868,42 @@
       <data/>
     </settings>
   </configuration>
+  <group>
+    <name>button</name>
+    <file>
+      <name>$PROJ_DIR$\..\common\button\button.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\common\button\button.h</name>
+    </file>
+  </group>
+  <group>
+    <name>ds1302</name>
+    <file>
+      <name>$PROJ_DIR$\..\common\ds1302\ds1302.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\common\ds1302\ds1302.h</name>
+    </file>
+  </group>
+  <group>
+    <name>SMG</name>
+    <file>
+      <name>$PROJ_DIR$\..\common\SMG\SMG.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\common\SMG\SMG.h</name>
+    </file>
+  </group>
+  <group>
+    <name>sys</name>
+    <file>
+      <name>$PROJ_DIR$\..\common\sys\sys.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\common\sys\sys.h</name>
+    </file>
+  </group>
   <file>
     <name>$PROJ_DIR$\main.c</name>
   </file>

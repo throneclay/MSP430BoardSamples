@@ -4,7 +4,7 @@
 uchar index=0;
 uchar rx_buff[RXBUFFLEN]={0};
 
-void serial_init_x1()
+void serial1_init_x1()
 {
   P3SEL |= 0x30;                            // P3.4,5 = USART0 TXD/RXD，串口0
   ME1 |= URXE0 + UTXE0;                     // Enable USART0 T/RXD，使能串口0
@@ -15,10 +15,10 @@ void serial_init_x1()
   UMCTL0 = 0x4A;                            // Modulation  01001010，调整因子
   UCTL0 &= ~SWRST;                          // Initialize USART state 
   
-  IE1 |= URXIE0;                            // Enable USART0 RX interrupt
+  //IE1 |= URXIE0;                            // Enable USART0 RX interrupt
 }
 
-void serial_init_x2()
+void serial1_init_x2()
 {
   P3SEL |= 0x30;                            // P3.4,5 = USART0 TXD/RXD   
   UCTL0 |= CHAR;                            // 选择8位字符
@@ -29,41 +29,61 @@ void serial_init_x2()
   UMCTL0 = 0x00;                            // 8MHz 9600 modulation
   UCTL0 &= ~SWRST;                          // Initialize USART state machine
   
-  IE1 |= URXIE0;                            // Enable USART0 RX interrupt
+  //IE1 |= URXIE0;                            // Enable USART0 RX interrupt
 }
 
-void serial_init(uchar x)
+void serial2_init_x1()
 {
- // if(x==1)
- // {
- //   serial_init_x1();
- // }
- // else
- // {
- //   serial_init_x2();
- // }
-   P3SEL |= 0x30;                            // P3.4,5 = USART0 TXD/RXD，串口0
-  ME1 |= URXE0 + UTXE0;                     // Enable USART0 T/RXD，使能串口0
-  UCTL0 |= CHAR;                            // 8-bit character，8位字符格式
-  UTCTL0 |= SSEL0;                          // UCLK = ACLK，时钟选择辅助时钟信号
-  UBR00 = 0x03;                             // 32k/9600 = 3.41
-  UBR10 = 0x00;                             //
-  UMCTL0 = 0x4A;                            // Modulation  01001010，调整因子
-  UCTL0 &= ~SWRST;                          // Initialize USART state 
-  
-  IE1 |= URXIE0;                            // Enable USART0 RX interrupt
+  P3SEL |= 0xC0;                            // P3.6,7 = USART1 TXD/RXD
+  ME2 |= UTXE1 + URXE1;                     // Enable USART1 TXD/RXD
+  UCTL1 |= CHAR;                            // 8-bit character
+  UTCTL1 |= SSEL0;                          // UCLK = ACLK
+  UBR01 = 0x03;                             // 32k/9600 - 3.41
+  UBR11 = 0x00;                             //
+  UMCTL1 = 0x4A;                            // Modulation
+  UCTL1 &= ~SWRST;                          // Initialize USART state machine
+  //IE2 |= URXIE1;                            // Enable USART1 RX interrupt
 }
 
+void serial2_init_x2()
+{
+    P3SEL |= 0xC0;                            // P3.6,7 = USART1 option select
+    ME2 |= UTXE1 + URXE1;                     // Enable USART1 TXD/RXD
+    UCTL1 |= CHAR;                            // 8-bit character
+    UTCTL1 |= SSEL1;                          // UCLK = SMCLK
+    UBR01 = 0x45;                             // 8Mhz/115200 - 69.44
+    UBR11 = 0x00;                             //
+    UMCTL1 = 0x2C;                            // modulation
+    UCTL1 &= ~SWRST;                          // Initialize USART state machine
+    //IE2 |= URXIE1;                            // Enable USART1 RX interrupt
+}
+
+
+void serial_init(uchar en_rx,uchar x)
+{//en_rx = enable rx function
+   if(x==1){
+     serial1_init_x1();
+   }
+   else{
+     serial1_init_x2();
+   }
+   
+   if(en_rx==1){
+    IE1 |= URXIE0;                            // Enable USART0 RX interrupt
+   }
+}
+// Send a string
 void Send_string(uchar *ptr)
 {
-      while(*ptr != '\0')
-      {
-            while (!(IFG1 & UTXIFG0));             // 等待发送寄存器空闲
-            TXBUF0 = *ptr++;                       // 发送数据
-      }
-      while (!(IFG1 & UTXIFG0));
+  while(*ptr != '\0')
+  {
+    while (!(IFG1 & UTXIFG0));             // 等待发送寄存器空闲
+    TXBUF0 = *ptr++;                       // 发送数据
+  }
+  while (!(IFG1 & UTXIFG0));
 }
 
+// Send a char
 void Send_char(uchar t)
 {
   TXBUF0 = t;                       // 发送数据
@@ -75,6 +95,7 @@ uchar Read_string()
   uchar temp=index;
   if(temp!=0)
   {
+    rx_buff[temp]='\0';
     index=0;
     return temp;
   }
@@ -87,6 +108,8 @@ uchar Read_string()
 #pragma vector=UART0RX_VECTOR
 __interrupt void usart0_rx (void)
 {
+  //main       -->       _BIS_SR(LPM3_bits + GIE);   
+  
   _BIC_SR_IRQ(LPM3_bits);                   // Clear LPM3 bits from 0(SR)
   rx_buff[index%RXBUFFLEN] = RXBUF0;                     // RXBUF0 to TXBUF0
   index++;
