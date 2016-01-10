@@ -5,21 +5,23 @@
 
 void main( void )
 {
-  uint temp=0;
+  float temp=0;
   uint t=0;
   // Stop watchdog timer to prevent time out reset
   WDTCTL = WDTPW + WDTHOLD;
   Clock_Init();
   SMG_init();
     Clock_Init();
-    temp = Ds18b20_Convert();
+    temp = Sener_ftemp();
   while(1)
   {
-    if(++t>600){
+
+    if(++t>400){
       t=0;
-      temp = Ds18b20_Convert();
+      temp = Sener_ftemp();
     }
-    SMG_Display(temp);
+
+    SMG_fDisplay(temp);
     
   }
 }

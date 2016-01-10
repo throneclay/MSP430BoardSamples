@@ -12,19 +12,19 @@
       <file>$PROJ_DIR$\..\common\SMG\SMG.c</file>
       <file>$PROJ_DIR$\..\common\sys\sys.c</file>
       <file>$PROJ_DIR$\..\common\sys\sys.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\DS18B20.pbd</file>
-      <file>$PROJ_DIR$\main.c</file>
-      <file>$TOOLKIT_DIR$\inc\in430.h</file>
       <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Exe\DS18B20.d43</file>
-      <file>$PROJ_DIR$\Debug\Obj\sys.pbi</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\DS18B20.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\in430.h</file>
       <file>$TOOLKIT_DIR$\inc\msp430x14x.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\sys.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\DS18B20.d43</file>
       <file>$PROJ_DIR$\Debug\Obj\SMG.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\ds18b20.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\sys.r43</file>
       <file>$PROJ_DIR$\Debug\Obj\ds18b20.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\sys.r43</file>
       <file>$PROJ_DIR$\Debug\Obj\SMG.r43</file>
     </outputs>
     <file>
@@ -32,7 +32,7 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 18</file>
+          <file> 17</file>
         </tool>
         <tool>
           <name>ICC430</name>
@@ -42,11 +42,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 2 5 14 8 9</file>
+          <file> 2 5 10 9 6</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 2 5 14 8 9</file>
+          <file> 2 5 10 9 6</file>
         </tool>
       </inputs>
     </file>
@@ -65,11 +65,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5 14 8 9 1</file>
+          <file> 5 10 9 6 1</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 5 14 8 9 1</file>
+          <file> 5 10 9 6 1</file>
         </tool>
       </inputs>
     </file>
@@ -82,26 +82,17 @@
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 17</file>
+          <file> 18</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5 14 8 9</file>
+          <file> 5 10 9 6</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 5 14 8 9</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Obj\DS18B20.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-          <file> 15 18 11 13</file>
+          <file> 5 10 9 6</file>
         </tool>
       </inputs>
     </file>
@@ -114,17 +105,26 @@
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 10</file>
+          <file> 12</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5 14 8 9 1 2</file>
+          <file> 5 10 9 6 1 2</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 5 14 8 9 1 2</file>
+          <file> 5 10 9 6 1 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\DS18B20.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 15 17 11 13</file>
         </tool>
       </inputs>
     </file>
@@ -133,7 +133,7 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 12</file>
+          <file> 14</file>
         </tool>
       </outputs>
     </file>
@@ -151,9 +151,9 @@
       <file>$PROJ_DIR$\..\common\SMG\SMG.c</file>
       <file>$PROJ_DIR$\..\common\sys\sys.c</file>
       <file>$PROJ_DIR$\..\common\sys\sys.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
       <file>$PROJ_DIR$\main.c</file>
       <file>$TOOLKIT_DIR$\inc\in430.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
       <file>$TOOLKIT_DIR$\inc\msp430x14x.h</file>
       <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\SMG.r43</file>
@@ -184,11 +184,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 2 5 9 7 8</file>
+          <file> 2 5 9 8 6</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 2 5 9 7 8</file>
+          <file> 2 5 9 8 6</file>
         </tool>
       </inputs>
     </file>
@@ -207,11 +207,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5 9 7 8 1</file>
+          <file> 5 9 8 6 1</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 5 9 7 8 1</file>
+          <file> 5 9 8 6 1</file>
         </tool>
       </inputs>
     </file>
@@ -230,11 +230,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5 9 7 8</file>
+          <file> 5 9 8 6</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 5 9 7 8</file>
+          <file> 5 9 8 6</file>
         </tool>
       </inputs>
     </file>
@@ -253,11 +253,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5 9 7 8 1 2</file>
+          <file> 5 9 8 6 1 2</file>
         </tool>
         <tool>
           <name>ICC430</name>
-          <file> 5 9 7 8 1 2</file>
+          <file> 5 9 8 6 1 2</file>
         </tool>
       </inputs>
     </file>

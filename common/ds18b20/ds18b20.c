@@ -6,11 +6,6 @@
 #define Ds18b20_Out   P6DIR |= BIT7    //DS18B20数据线设置输出
 #define Ds18b20_Value (P6IN & BIT7)    //DS18B20数据线获取值
 
-float ftemp;
-uint zhengshu;
-uint xiaoshu;
-uchar dN[9];   //串口要显示的字符串
-
 
 /*******************************************
 函数名称：Init_18B20
@@ -152,16 +147,12 @@ uint Read_Temp(void)
 uint Ds18b20_Convert(void)
 {
     uchar i; 
-    
-    do
-    {
-        i = Init_18B20();
-    }
-    while(i);
+
+    while(Init_18B20());
     Skip();
     Convert();
-    for(i = 20;i > 0;i--)  
-        Delay_us(60000); //延时800ms以上
+    //for(i = 20;i > 0;i--)  
+        Delay_us(100); //...延时
     do
     {
         i = Init_18B20();
@@ -173,102 +164,14 @@ uint Ds18b20_Convert(void)
     return Read_Temp();
 }
 
-
-
-/*******************************************
-函数名称：Disp_Numb
-功    能：将从DS18B20读取的11bit温度数据转换
-          成液晶显示的温度数字
-参    数：temper--11bit温度数据
-返回值  ：无
-********************************************/
-void Disp_Numb()
+float Sener_ftemp()
 {
+  float ftemp = 0.0;
   uint temper = Ds18b20_Convert(); 
-
-    //数值转换
-    if(temper & BIT0) 
-    {
-        dN[0] = 5;
-        dN[1] = 2;
-        dN[2] = 6;
-    }
-    if(temper&BIT1)     
-    {
-        dN[1] += 5;
-        dN[2] += 2;
-        dN[3] += 1;
-    }
-    if(temper & BIT2)     
-    {
-        dN[2] += 5;
-        dN[3] += 2;
-        if(dN[2] >= 10)
-        {
-            dN[2] -= 10;
-            dN[3] += 1;
-        }
-    }
-    if(temper&BIT3)     
-    {
-        dN[3] += 5;
-    }
-    if(temper & BIT4)
-    {
-        dN[4] += 1;
-    }
-    if(temper & BIT5)     
-    {
-        dN[4] += 2;
-    }
-    if(temper & BIT6)
-    {
-        dN[4] += 4;
-    }
-    if(temper & BIT7)     
-    {
-        dN[4] += 8;
-        if(dN[4] >= 10)
-        {
-            dN[4] -= 10;
-            dN[5] += 1;
-        }
-    }
-    if(temper & BIT8)
-    {
-        dN[4] += 6;
-        dN[5] += 1;
-        if(dN[4] >= 10)
-        {
-            dN[4] -= 10;
-            dN[5] += 1;
-        }
-    }
-    if(temper & BIT9)
-    {
-        dN[4] += 2;
-        dN[5] += 3;
-        if(dN[4] >= 10)
-        {
-            dN[4] -= 10;
-            dN[5] += 1;
-        }
-    }
-    if(temper & BITA)
-    {
-        dN[4] += 4;
-        dN[5] += 6;
-        if(dN[4] >= 10)
-        {
-            dN[4] -= 10;
-            dN[5] += 1;
-        }
-        if(dN[5] >= 10)
-        {
-            dN[5] -= 10;
-        }
-    }
-    ftemp = dN[0]*10+dN[1]+dN[3]/10+dN[4]/100+dN[5]/1000+dN[6]/10000;
-    zhengshu = dN[0]*10+dN[1];
-    xiaoshu = dN[3]*1000+dN[4]*100+dN[5]*10+dN[6];
+  ftemp = (temper&0x000f)*0.0625;
+  temper=temper>>4;
+  ftemp +=temper & 0x007f;
+  if((temper&0xf000)==0xf000)
+    ftemp *=-1.0;
+  return ftemp;
 }

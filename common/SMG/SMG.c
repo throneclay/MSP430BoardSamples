@@ -16,6 +16,7 @@ P4 -> 7  6 5 4 3 2 1 0
 */
 #include "../sys/sys.h"
 #include "SMG.h"
+#define DELAY_TIME 1
 
 //数码管显示： 0 ~ F
 uchar SMG_Code[16] = {0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07, 0x7f, 0x6f, 0x77, 0x7c, 0x39, 0x5e, 0x79, 0x71};
@@ -43,27 +44,65 @@ void SMG_Display(uint number)
   //数码管个位
   P5OUT = 0x0e;
   P4OUT = SMG_Code[Qian];
-  Delay_us(200);
+  Delay_ms(DELAY_TIME);
   P5OUT = 0X0f;
   
   P4OUT=0x00;
   //数码管十位
   P5OUT = 0x0d;
   P4OUT = SMG_Code[Bai];
-  Delay_us(200);
+  Delay_ms(DELAY_TIME);
   P5OUT = 0x0f;
   
   P4OUT=0x00;
   //数码管百位
   P5OUT = 0x0b;
   P4OUT = SMG_Code[Shi];
-  Delay_us(200);
+  Delay_ms(DELAY_TIME);
   P5OUT = 0x0f;
   
   P4OUT=0x00;
   //数码管千位
   P5OUT = 0x07;
   P4OUT = SMG_Code[Ge];
-  Delay_us(200);
+  Delay_ms(DELAY_TIME);
+  P5OUT = 0x0f;
+}
+
+void SMG_fDisplay(float num)
+{
+  uint number = (uint)(num*100);
+  unsigned char Ge, Shi ,Bai ,Qian;
+  Ge = number % 10;
+  Shi = (number / 10) % 10;
+  Bai = (number / 100) % 10;
+  Qian = number / 1000;
+  
+  P4OUT=0x00;
+  //数码管个位
+  P5OUT = 0x0e;
+  P4OUT = SMG_Code[Qian];
+  Delay_ms(DELAY_TIME);
+  P5OUT = 0X0f;
+  
+  P4OUT=0x00;
+  //数码管十位
+  P5OUT = 0x0d;
+  P4OUT = SMG_Code[Bai]+0x80;
+  Delay_ms(DELAY_TIME);
+  P5OUT = 0x0f;
+  
+  P4OUT=0x00;
+  //数码管百位
+  P5OUT = 0x0b;
+  P4OUT = SMG_Code[Shi];
+  Delay_ms(DELAY_TIME);
+  P5OUT = 0x0f;
+  
+  P4OUT=0x00;
+  //数码管千位
+  P5OUT = 0x07;
+  P4OUT = SMG_Code[Ge];
+  Delay_ms(DELAY_TIME);
   P5OUT = 0x0f;
 }

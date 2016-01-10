@@ -15,6 +15,7 @@ void Convert(void);
 void Read_SP(void);
 uint Read_Temp(void);
 uint Ds18b20_Convert(void);
-void Disp_Numb(void);
+
+float Sener_ftemp();
 
 #endif
