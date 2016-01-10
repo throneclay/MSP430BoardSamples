@@ -3,10 +3,15 @@
 
 #include <msp430x14x.h>
 
-#define uint unsigned int
-#define uchar unsigned char
-#define ulong unsigned long int
-
+#ifndef uint
+  #define uint unsigned int
+#endif
+#ifndef uchar
+  #define uchar unsigned char
+#endif
+#ifndef ulong
+  #define ulong unsigned long int
+#endif
 
 #define CPU_F ((double)8000000)           //œµÕ≥ ±÷”8Mhz
 

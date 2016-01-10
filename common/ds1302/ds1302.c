@@ -1,6 +1,6 @@
+#include "../sys/sys.h"
 #include "ds1302.h"
 
-unsigned char time_buf1[8] = {0x20,0x16,0x01,0x10,0x20,0x35,0x10,0x03};			//空年月日时分秒周
 unsigned char time_buf[8] ;                         
 
 uchar DS1302_Time[17];
@@ -96,28 +96,28 @@ unsigned char Ds1302_Read_Byte(unsigned char addr)
 	}
 
 	RST_CLR;	//停止DS1302总线
-	Delay_us(5);
+	//Delay_us(5);
 	return temp;
 }
 
 /*------------------------------------------------
            向DS1302写入时钟数据
 ------------------------------------------------*/
-void Ds1302_Write_Time(void) 
+void Ds1302_Write_Time(uchar *buff) 
 {
 	Ds1302_Write_Byte(ds1302_control_add,0x00);			//关闭写保护 
 //	Ds1302_Write_Byte(ds1302_sec_add,0x80);				//暂停 
 //	Ds1302_Write_Byte(ds1302_charger_add,0xa9);			//涓流充电 
 
 
-	Ds1302_Write_Byte(ds1302_year_add,time_buf1[1]);		//年 
-	Ds1302_Write_Byte(ds1302_month_add,time_buf1[2]);	//月 
-	Ds1302_Write_Byte(ds1302_date_add,time_buf1[3]);		//日 
-	Ds1302_Write_Byte(ds1302_day_add,time_buf1[7]);		//周 
-	Ds1302_Write_Byte(ds1302_hr_add,time_buf1[4]);		//时 
-	Ds1302_Write_Byte(ds1302_min_add,time_buf1[5]);		//分
-	Ds1302_Write_Byte(ds1302_sec_add,time_buf1[6]);		//秒
-	Ds1302_Write_Byte(ds1302_day_add,time_buf1[7]);		//周 
+	Ds1302_Write_Byte(ds1302_year_add,buff[1]);		//年 
+	Ds1302_Write_Byte(ds1302_month_add,buff[2]);	//月 
+	Ds1302_Write_Byte(ds1302_date_add,buff[3]);		//日 
+	Ds1302_Write_Byte(ds1302_day_add,buff[7]);		//周 
+	Ds1302_Write_Byte(ds1302_hr_add,buff[4]);		//时 
+	Ds1302_Write_Byte(ds1302_min_add,buff[5]);		//分
+	Ds1302_Write_Byte(ds1302_sec_add,buff[6]);		//秒
+	Ds1302_Write_Byte(ds1302_day_add,buff[7]);		//周 
 
 	Ds1302_Write_Byte(ds1302_control_add,0x80);			//打开写保护 
 }
