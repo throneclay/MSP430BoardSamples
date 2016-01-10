@@ -20,7 +20,7 @@ void main( void )
     t = button_scan();
     if(t==4)
       i++;
-    if(++j>100){
+    if(++j>10){
       j=0;
       switch(i%4)
       {

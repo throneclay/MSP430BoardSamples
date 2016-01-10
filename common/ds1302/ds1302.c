@@ -96,7 +96,7 @@ unsigned char Ds1302_Read_Byte(unsigned char addr)
 	}
 
 	RST_CLR;	//Í£Ö¹DS1302×ÜÏß
-	Delay_ms(5);
+	Delay_us(5);
 	return temp;
 }
 
