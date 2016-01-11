@@ -167,6 +167,7 @@ void NRF24L01_ConfigMode(uchar mode)
     SPI_Write_Reg(WRITE_REG+CONFIG,0x0C);    //配置基本工作模式的参数;PWR_UP,EN_CRC,16BIT_CRC,关闭。。
     break;
   }
+  Delay_us(15);
 }
 
 void NRF24L01_init(uchar interrupt,uchar check)
