@@ -148,7 +148,7 @@ void Ds1302_Init(void)
 	RST_CLR;			//RSTΩ≈÷√µÕ
 	SCK_CLR;			//SCKΩ≈÷√µÕ
 	Ds1302_Write_Byte(ds1302_control_add,0x00);			//πÿ±’–¥±£ª§ 
-        Ds1302_Write_Byte(ds1302_sec_add,0x00);
+        //Ds1302_Write_Byte(ds1302_sec_add,0x00);
 	Ds1302_Write_Byte(0x90,0xa6);				 
 	Ds1302_Write_Byte(ds1302_control_add,0x80);				 
 }
