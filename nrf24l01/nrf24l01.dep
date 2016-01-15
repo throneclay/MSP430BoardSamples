@@ -14,19 +14,19 @@
       <file>$PROJ_DIR$\..\common\SMG\SMG.c</file>
       <file>$PROJ_DIR$\..\common\sys\sys.c</file>
       <file>$PROJ_DIR$\..\common\sys\sys.h</file>
-      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
-      <file>$PROJ_DIR$\main.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\nrf24l01.r43</file>
       <file>$PROJ_DIR$\Debug\Obj\nrf24l01.pbd</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+      <file>$PROJ_DIR$\Debug\Obj\nrf24l01.r43</file>
+      <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
+      <file>$PROJ_DIR$\Debug\Exe\nrf24l01.d43</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
       <file>$PROJ_DIR$\Debug\Obj\sys.pbi</file>
       <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
       <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
-      <file>$PROJ_DIR$\Debug\Exe\nrf24l01.d43</file>
-      <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
-      <file>$PROJ_DIR$\Debug\Obj\sys.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\button.pbi</file>
       <file>$TOOLKIT_DIR$\inc\in430.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\button.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\sys.r43</file>
       <file>$PROJ_DIR$\Debug\Obj\nrf24l01.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\button.r43</file>
       <file>$TOOLKIT_DIR$\inc\msp430x14x.h</file>
@@ -39,7 +39,7 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 16</file>
+          <file> 13</file>
         </tool>
       </outputs>
     </file>
@@ -47,22 +47,22 @@
       <name>$PROJ_DIR$\..\common\button\button.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 22</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 19</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 22</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 7 23 20 13 2</file>
+          <name>BICOMP</name>
+          <file> 7 23 18 16 2</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 7 23 20 13 2</file>
+          <name>ICC430</name>
+          <file> 7 23 18 16 2</file>
         </tool>
       </inputs>
     </file>
@@ -70,22 +70,22 @@
       <name>$PROJ_DIR$\..\common\nrf24l01\nrf24l01.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 10</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 21</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 11</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 7 23 20 13 4</file>
+          <name>BICOMP</name>
+          <file> 7 23 18 16 4</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 7 23 20 13 4</file>
+          <name>ICC430</name>
+          <file> 7 23 18 16 4</file>
         </tool>
       </inputs>
     </file>
@@ -93,22 +93,22 @@
       <name>$PROJ_DIR$\..\common\SMG\SMG.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 25</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 26</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 25</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 7 23 20 13 1</file>
+          <name>BICOMP</name>
+          <file> 7 23 18 16 1</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 7 23 20 13 1</file>
+          <name>ICC430</name>
+          <file> 7 23 18 16 1</file>
         </tool>
       </inputs>
     </file>
@@ -116,45 +116,22 @@
       <name>$PROJ_DIR$\..\common\sys\sys.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 18</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 12</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC430</name>
-          <file> 7 23 20 13</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 7 23 20 13</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main.c</name>
-      <outputs>
-        <tool>
-          <name>ICC430</name>
           <file> 15</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 14</file>
+          <name>ICC430</name>
+          <file> 20</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 7 23 20 13 2 4 1</file>
+          <name>BICOMP</name>
+          <file> 7 23 18 16</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 7 23 20 13 2 4 1</file>
+          <name>ICC430</name>
+          <file> 7 23 18 16</file>
         </tool>
       </inputs>
     </file>
@@ -163,7 +140,30 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 26 19 14 21 12</file>
+          <file> 26 19 17 21 15</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 17</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7 23 18 16 2 4 1</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 7 23 18 16 2 4 1</file>
         </tool>
       </inputs>
     </file>
@@ -172,7 +172,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 24 17 25 22 15 10 18 8</file>
+          <file> 24 12 25 22 14 11 20 10</file>
         </tool>
       </inputs>
     </file>
@@ -189,8 +189,8 @@
       <file>$PROJ_DIR$\..\common\sys\sys.c</file>
       <file>$PROJ_DIR$\..\common\sys\sys.h</file>
       <file>$PROJ_DIR$\main.c</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
       <file>$TOOLKIT_DIR$\config\multiplier.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
       <file>$TOOLKIT_DIR$\inc\in430.h</file>
       <file>$TOOLKIT_DIR$\inc\msp430x14x.h</file>
       <file>$TOOLKIT_DIR$\config\lnk430F149.xcl</file>
@@ -221,22 +221,22 @@
       <name>$PROJ_DIR$\..\common\button\button.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 26</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 18</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 26</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 7 12 11 9 2</file>
+          <name>BICOMP</name>
+          <file> 7 12 11 10 2</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 7 12 11 9 2</file>
+          <name>ICC430</name>
+          <file> 7 12 11 10 2</file>
         </tool>
       </inputs>
     </file>
@@ -244,22 +244,22 @@
       <name>$PROJ_DIR$\..\common\nrf24l01\nrf24l01.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 25</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 16</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 25</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 7 12 11 9 4</file>
+          <name>BICOMP</name>
+          <file> 7 12 11 10 4</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 7 12 11 9 4</file>
+          <name>ICC430</name>
+          <file> 7 12 11 10 4</file>
         </tool>
       </inputs>
     </file>
@@ -267,22 +267,22 @@
       <name>$PROJ_DIR$\..\common\SMG\SMG.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 24</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 22</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 24</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 7 12 11 9 1</file>
+          <name>BICOMP</name>
+          <file> 7 12 11 10 1</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 7 12 11 9 1</file>
+          <name>ICC430</name>
+          <file> 7 12 11 10 1</file>
         </tool>
       </inputs>
     </file>
@@ -290,22 +290,22 @@
       <name>$PROJ_DIR$\..\common\sys\sys.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 23</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 20</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 23</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 7 12 11 9</file>
+          <name>BICOMP</name>
+          <file> 7 12 11 10</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 7 12 11 9</file>
+          <name>ICC430</name>
+          <file> 7 12 11 10</file>
         </tool>
       </inputs>
     </file>
@@ -313,22 +313,22 @@
       <name>$PROJ_DIR$\main.c</name>
       <outputs>
         <tool>
-          <name>ICC430</name>
-          <file> 21</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 19</file>
+        </tool>
+        <tool>
+          <name>ICC430</name>
+          <file> 21</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ICC430</name>
-          <file> 7 12 11 9 2 4 1</file>
+          <name>BICOMP</name>
+          <file> 7 12 11 10 2 4 1</file>
         </tool>
         <tool>
-          <name>BICOMP</name>
-          <file> 7 12 11 9 2 4 1</file>
+          <name>ICC430</name>
+          <file> 7 12 11 10 2 4 1</file>
         </tool>
       </inputs>
     </file>
@@ -337,7 +337,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 13 10 24 26 21 25 23 14</file>
+          <file> 13 9 24 26 21 25 23 14</file>
         </tool>
       </inputs>
     </file>

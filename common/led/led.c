@@ -25,3 +25,7 @@ void led1_off(int led)
 {
   P4OUT &=~LED_CODE1[led%8];
 }
+void led_out(uchar code)
+{
+  P4OUT = code;
+}

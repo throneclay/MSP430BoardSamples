@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>bmp085/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>157</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+    </Static>
+    <Windows>
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-18407-15048</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>bmp085</ExpandedNode><ExpandedNode>bmp085/bmp085</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>306</SelStart><SelEnd>306</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\common\bmp085\bmp085.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>42</SelStart><SelEnd>42</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\common\bmp085\bmp085.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>240</SelStart><SelEnd>240</SelEnd></Tab><ActiveTab>2</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-0281d5a0><key>iaridepm.enu1</key></Toolbar-0281d5a0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>923</Bottom><Right>231</Right><x>-2</x><y>-2</y><xscreen>233</xscreen><yscreen>226</yscreen><sizeHorzCX>138690</sizeHorzCX><sizeHorzCY>233471</sizeHorzCY><sizeVertCX>138690</sizeVertCX><sizeVertCY>955579</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes/></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
