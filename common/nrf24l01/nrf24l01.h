@@ -100,6 +100,7 @@ void NRF24L01_ConfigReg();
 void NRF24L01_ConfigMode(uchar mode);
 void NRF24L01_init(uchar interrupt,uchar check);
 uchar NRF24L01_Check(void);
-
+void nrf24l01_int_en();
+void nrf24l01_int_dis();
 
 #endif

@@ -1573,7 +1573,7 @@
         </option>
         <option>
           <name>OutputFile</name>
-          <state>templproj.txt</state>
+          <state>nrf24l01.txt</state>
         </option>
         <option>
           <name>OutputFormat</name>
@@ -1878,21 +1878,21 @@
     </file>
   </group>
   <group>
+    <name>led</name>
+    <file>
+      <name>$PROJ_DIR$\..\common\led\led.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\common\led\led.h</name>
+    </file>
+  </group>
+  <group>
     <name>nrf24l01</name>
     <file>
       <name>$PROJ_DIR$\..\common\nrf24l01\nrf24l01.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\common\nrf24l01\nrf24l01.h</name>
-    </file>
-  </group>
-  <group>
-    <name>SMG</name>
-    <file>
-      <name>$PROJ_DIR$\..\common\SMG\SMG.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\common\SMG\SMG.h</name>
     </file>
   </group>
   <group>

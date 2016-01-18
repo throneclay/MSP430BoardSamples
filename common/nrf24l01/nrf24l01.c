@@ -17,6 +17,19 @@ void nrf24l01_init_pins()
   NRF_CSN1;
   NRF_SCK0;
 }
+//中断使能和中断停止
+void nrf24l01_int_en()
+{
+  P2IFG = 0x00;
+  P2IES = 0x40;
+  P2IE = 0x40;
+  _EINT();
+}
+
+void nrf24l01_int_dis()
+{
+  _DINT();
+}
 
 /////////////////////////读写操作/////////////////////////////////////
 uchar SPI_RW(uchar byte)
@@ -177,6 +190,10 @@ void NRF24L01_init(uchar interrupt,uchar check)
     while(NRF24L01_Check()); // 必须检测到设备才能继续下去
   NRF24L01_ConfigReg();
   NRF24L01_ConfigMode(MODERX);
+  if(interrupt!=0)
+  {
+    nrf24l01_int_en();
+  }
   
 }
 
@@ -200,3 +217,33 @@ uchar NRF24L01_Check(void)
   else return 1;
 }
 
+
+
+void NRF24L01_ClearBuf()
+{
+  uchar i=0;
+  while(i<RX_PLOAD_WIDTH)
+    rece_buf[i]=0;
+}
+
+void NRF24L01_PrepBuf(uchar *buf,uchar len)
+{
+  
+  uchar i=0;
+  if(len==0){
+    while(i<31&&(buf[i]!='\0'))
+    {
+      rece_buf[i+1]=buf[i];
+      i++;
+    }
+  }
+  else
+  {
+    while(i<31&&i<len)
+    {
+      rece_buf[i+1]=buf[i];
+      i++;
+    }
+  }
+  rece_buf[0] = i;
+}
