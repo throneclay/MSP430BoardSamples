@@ -1,6 +1,6 @@
 #ifndef __LED_H__
 #define __LED_H__
-
+#include "../sys/sys.h"
 extern uchar LED_CODE1[],LED_CODE2[],LED_CODE3[],LED_CODE4[];
 
 void led_init();
